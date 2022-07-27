@@ -25,6 +25,10 @@ func main() {
 		log.Fatal("can't load config", zap.Error(err))
 	}
 
+	Startup(cfg, log)
+}
+
+func Startup(cfg *config.Config, log *zap.Logger) {
 	srv, err := initService(cfg)
 	if err != nil {
 		log.Fatal("can't init service", zap.Error(err))

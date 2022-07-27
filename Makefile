@@ -29,5 +29,4 @@ wait-api:
 		sleep 3; \
 	done
 
-
 run: up-db wait-db up-api wait-api create-varejao create-macapa
